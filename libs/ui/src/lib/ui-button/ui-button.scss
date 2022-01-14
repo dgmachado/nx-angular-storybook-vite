@@ -1,0 +1,53 @@
+// @use "@ui/styles/helpers";
+// @use "@ui/styles/geometry";
+// @use "@ui/styles/typography";
+// @use "@ui/styles/spacing";
+
+// .ui-button {
+//   @include helpers.button-reset(false);
+//   border-radius: geometry.$r-1;
+
+//   &--s {
+//     @include typography.medium-14;
+//     @include spacing.p(6px, s4, 6px, s4);
+//   }
+
+//   &--m {
+//     @include typography.medium-16;
+//     @include spacing.p(s3, s5, s3, s5);
+//   }
+
+//   &--l {
+//     @include typography.medium-16;
+//     @include spacing.p(s4, s6, s4, s6);
+//   }
+
+//   &--primary {
+//     background-color: var(--color-button-primary);
+//     color: var(--color-txt-icon-super-light);
+
+//     &:hover {
+//       // TODO: fix
+//       //box-shadow: 0 0 0 typography.rem(12px) rgba(#{var(--color-button-primary)}, 0.3);
+//     }
+//   }
+
+//   &--secondary {
+//     background-color: var(--color-button-secondary);
+//     color: var(--color-txt-icon-2);
+//   }
+
+//   &--tetriary {
+//     background-color: var(--color-button-tetriary);
+//     color: var(--color-txt-icon-super-light);
+
+//     &:hover {
+//       background-color: var(--color-button-tetriary-hover);
+//     }
+//   }
+
+//   &--quaternary {
+//     background-color: var(--color-transparent);
+//     color: var(--color-button-link);
+//   }
+// }
