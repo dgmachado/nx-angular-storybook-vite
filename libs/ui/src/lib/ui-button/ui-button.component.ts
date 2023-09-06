@@ -2,7 +2,7 @@ import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'angular-storybook-ui-button',
-  template: '<button>test button</button>  ',
+  template: '<button>button</button><app-label></app-label>',
   styleUrls: ['./ui-button.scss']
 })
 export class UiButtonComponent {

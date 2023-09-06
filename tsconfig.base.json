@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-storybook/label": ["libs/label/src/index.ts"],
       "@angular-storybook/ui": ["libs/ui/src/index.ts"]
     }
   },
