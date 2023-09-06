@@ -1,6 +1,7 @@
 {
+  "name": "ng-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/ng-app",
   "sourceRoot": "apps/ng-app/src",
   "prefix": "angular-storybook",
   "targets": {
@@ -80,9 +81,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/ng-app"],
+      "outputs": ["{workspaceRoot}/coverage/apps/ng-app"],
       "options": {
-        "jestConfig": "apps/ng-app/jest.config.js",
+        "jestConfig": "apps/ng-app/jest.config.ts",
         "passWithNoTests": true
       }
     }
