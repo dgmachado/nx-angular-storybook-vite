@@ -51,3 +51,37 @@
 //     color: var(--color-button-link);
 //   }
 // }
+
+
+// Button Styles
+.ui-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; // Primary button color
+  color: #fff; // Text color
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+
+  &:hover {
+    background-color: #0056b3; // Darker color on hover
+  }
+
+  &:active {
+    transform: scale(0.95); // Slight scale down on click
+  }
+
+  &.secondary {
+    background-color: #6c757d; // Secondary button color
+    &:hover {
+      background-color: #545b62; // Darker color on hover for secondary button
+    }
+  }
+
+  &.disabled {
+    background-color: #ccc; // Disabled button color
+    cursor: not-allowed;
+  }
+}

@@ -48,6 +48,7 @@
     "@storybook/angular": "6.5.16",
     "@storybook/builder-webpack5": "6.5.16",
     "@storybook/manager-webpack5": "6.5.16",
+    "@storybook/preset-scss": "1.0.3",
     "@types/jest": "29.5.4",
     "@types/node": "18.17.9",
     "@typescript-eslint/eslint-plugin": "5.62.0",
