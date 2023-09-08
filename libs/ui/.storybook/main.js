@@ -1,32 +1,24 @@
-const rootMain = require('../../../.storybook/main');
+const { mergeConfig } = require('vite');
+const angular = require('@analogjs/vite-plugin-angular');
 
 module.exports = {
-  ...rootMain,
-
-  core: { ...rootMain.core, builder: 'webpack5' },
-
-  stories: [
-    '../src/lib/**/*.stories.mdx',
-    '../src/lib/**/*.stories.@(js|jsx|ts|tsx)',
+  "stories": [
+    "../src/**/*.stories.mdx",
+    "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
-  addons: ['@storybook/addon-essentials', '@storybook/preset-scss'],
-  webpackFinal: async (config, { configType }) => {
-    // apply any global webpack configs that might have been specified in .storybook/main.js
-    if (rootMain.webpackFinal) {
-      config = await rootMain.webpackFinal(config, { configType });
-    }
-
-    // remove html raw-loader that breaks Jit compilation
-    const rules = (config.module.rules ?? []).filter(
-      (rule) =>
-        rule.test !== /\.html$/ &&
-        rule.exclude !== /\.async\.html$/ &&
-        !rule.loader?.includes('raw-loader')
-    );
-    config.module.rules = [...rules];
-  
-    // add your own webpack tweaks if needed
-
-    return config;
+  "addons": [
+    "@storybook/addon-essentials",
+  ],
+  "framework": "@storybook/angular",
+  "core": {
+    "builder": "@storybook/builder-vite"
   },
-};
+  "staticDirs": [
+  ],
+  async viteFinal(config, { configType }) {
+    // return the customized config
+    return mergeConfig(config, {
+      plugins: [angular.default()],
+    });
+  },  
+}
